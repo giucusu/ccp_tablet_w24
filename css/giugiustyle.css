@@ -1,0 +1,367 @@
+body {
+  background-color: #D6EBD5;
+  color: black;
+  margin: 1%;
+  font-size: 100%;
+  font-family: anaheim, sans-serif;
+}
+
+header {
+  background-color: #D6EBD5;
+  padding: 20px;
+  text-align: center;
+  /* Center the content horizontally */
+  border: none;
+}
+
+header img {
+  border: none;
+  width: 100%;
+  height: auto;
+  max-width: 600px;
+  display: block;
+  margin: 0 auto;
+}
+
+
+
+h1,
+h2,
+h3 {
+  font-family: anaheim, sans-serif;
+}
+
+h1 {
+  font-weight: bold;
+  font-size: 2em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 20px;
+  padding: 20px;
+  background-color: #D6EBD5;
+  text-align: center;
+  max-width: 100%;
+}
+
+
+h2 {
+  font-size: 1.5em;
+
+}
+
+h3 {
+  font-size: 1em;
+  margin-bottom: 20px;
+}
+
+p {
+  padding: 10px;
+  line-height: 1.5;
+}
+
+footer {
+  text-align: center;
+  background-color: #D6EBD5;
+  padding: 20px;
+  border-top: 1px solid #4b0082;
+  margin-top: 20px;
+  font-family: anaheim, sans-serif;
+  font-size: 1em;
+  color: #4b0082;
+}
+
+footer a {
+  color: #4F1271;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+}
+
+nav ul li {
+  display: inline-block;
+  background-color: #f1eaff;
+  padding: 10px;
+  border: 1px solid #4b0082;
+  overflow: hidden;
+  transition: background-color 0.3s ease;
+  margin: 0 10px;
+  /* Adjust spacing between navigation links */
+  justify-content: center; 
+  align-items: center;
+}
+
+nav ul li:hover {
+  background-color: #c5b1e8;
+}
+
+.active {
+  color: #15420b;
+  font-weight: bold;
+}
+
+a:visited {
+  color: #0c3b01;
+}
+
+.active::after {
+  content: "🌟";
+  margin-left: 5px;
+}
+
+
+
+/* for .gif { */
+.gif {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  display: block;
+  margin: 0 auto;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .gif {
+    display: none;
+  }
+}
+
+/* skip link */
+.skip-link {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  background-color: #fff;
+  border: 2px solid #000;
+  color: #000;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  letter-spacing: .15ch;
+  padding: 1rem 2rem;
+  text-decoration: none;
+  transition: background-color .3s ease-in-out, color .3s ease-in-out;
+  visibility: hidden;
+}
+
+.skip-link:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+  outline: none;
+  top: 6rem;
+  left: 2rem;
+  z-index: 10;
+}
+
+.skip-link:focus:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+.contentinfo {
+  padding: 100px;
+  text-align: center;
+  border: none;
+}
+
+img {
+  border: 5px solid #fafafa;
+  padding: 0px;
+  margin: 5px;
+  border-top-right-radius: 30px;
+  width: 300px;
+  height: auto;
+}
+
+/* Styling for the photo gallery */
+.photo-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-auto-rows: minmax(200px, auto);
+  gap: 20px;
+  justify-items: center;
+  align-items: center;
+  background-color: #fddeff;
+  /* Light purple background */
+  max-width: 100%;
+  border-radius: 15px;
+  /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* Drop shadow */
+}
+
+.photo-gallery h3 {
+  margin-top: 0;
+  /* Remove top margin of the title */
+}
+
+.photo-gallery img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.photo-gallery img:hover {
+  transform: scale(1.1);
+}
+
+
+@font-face {
+  font-family: Anahiem;
+  src: url(/Anaheim/Anaheim-Regular.ttf) format('ttf'),
+}
+
+.photo-gallery-title {
+  justify-items: center;
+  align-items: center;
+  padding: 10px;
+  /* Reduced padding */
+  background-color: #fddeff;
+  /* Light purple background */
+  max-width: 100%;
+  text-align: center;
+
+}
+
+/* tablet view */
+@media screen and (min-width: 768px) {
+  .photo-gallery {
+    grid-template-columns: 1fr;
+    /* Switch to one image per row */
+  }
+
+  nav.navigation {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 200px;
+    height: 100%;
+    overflow-y: auto;
+    text-align: left;
+  }
+  
+  nav ul {
+    margin: 0;
+    padding: 20px;
+  }
+  
+  nav ul li {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+
+  body {
+    font-size: 200%;
+    /* Reset font size */
+  }
+
+  img {
+    width: 75%;
+  }
+
+  h3.name-photo-section {
+    word-wrap: break-word;
+    /* Ensure long words are broken */
+  }
+}
+
+.name-photo-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 20px;
+  padding: 20px;
+  background-color: #D6EBD5;
+  text-align: center;
+  text-align: justify;
+  max-width: 100%;
+}
+
+.name-photo-section::after {
+  content: '';
+  /* Create an empty pseudo-element */
+  flex-grow: 1;
+  /* Allow the pseudo-element to grow and fill remaining space */
+}
+
+.ingredients-and-instructions {
+  background-color: #e9ffc0;
+  /* Light green background */
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+  /* Add some top margin */
+}
+
+.ingredients-and-instructions h3 {
+  font-size: 1.5em;
+  /* Increase heading font size */
+  font-weight: bold;
+  /* Make the heading bold */
+}
+
+.ingredients-and-instructions p {
+  margin-bottom: 10px;
+  /* Add space between paragraphs */
+}
+
+
+.likes-section {
+  background-color: #e9ffc0;
+  padding: 20px;
+  text-align: center;
+  margin-top: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.likes-section h3 {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+.likes-section ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.likes-section li {
+  display: inline-block;
+  margin: 5px;
+  padding: 8px 12px;
+  border-radius: 20px;
+  background-color: #bdecb6;
+  font-weight: normal;
+  color: #333;
+  transition: background-color 0.3s ease;
+}
+
+.likes-section li:hover {
+  background-color: #8ad387;
+}
